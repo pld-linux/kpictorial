@@ -2,7 +2,7 @@ Summary:	KDE3 logical game
 Summary(pl):	Gra logiczna dla KDE3
 Name:		kpictorial
 Version:	0.9.1
-Release:	0.1
+Release:	1
 License:	GPL
 Group:		X11/Applications
 Source0:	http://telia.dl.sourceforge.net/sourceforge/kpictorial/%{name}-%{version}.tar.gz
