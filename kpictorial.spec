@@ -64,11 +64,10 @@ mv $RPM_BUILD_ROOT%{_datadir}/apps/kpictorial/{kpictorial-imglib,imglib}
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/*
 %{_applnkdir}/Games/Board/*
-%{_datadir}/apps/kpictorial
 %{_datadir}/apps/kpictorial
 %{_pixmapsdir}/*/*/*/*
 
