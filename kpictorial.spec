@@ -49,15 +49,17 @@ CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT{%{_applnkdir}/Games/Board,%{_datadir}/apps/kpictorial}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT%{_applnkdir}/Games/Board
 mv $RPM_BUILD_ROOT%{_applnkdir}/{Games,Games/Board}/kpictorial.desktop
-install -d $RPM_BUILD_ROOT%{_datadir}/apps/kpictorial
+
 tar zxvf %{SOURCE1} -C $RPM_BUILD_ROOT%{_datadir}/apps/kpictorial
 mv $RPM_BUILD_ROOT%{_datadir}/apps/kpictorial/{kpictorial-imglib,imglib}
+
+%find_lang %{name} --with-kde
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -66,10 +68,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/*
 %{_applnkdir}/Games/Board/*
-%{_datadir}/apps/kpictorial/kpictorialui.rc
-%{_datadir}/apps/kpictorial/icons
+%{_datadir}/apps/kpictorial
+%{_datadir}/apps/kpictorial
 %{_pixmapsdir}/*/*/*/*
-%{_docdir}/kde/HTML/en/kpictorial
 
 %files imglib
 %{_datadir}/apps/kpictorial/imglib
