@@ -43,7 +43,7 @@ kde_icondir="%{_pixmapsdir}"; export kde_icondir
 
 CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
 
-%configure2_13
+%configure
 
 %{__make}
 
