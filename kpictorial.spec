@@ -18,7 +18,7 @@ Buildroot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define         _htmldir        /usr/share/doc/kde/HTML
 
 %description
-Kpictorial is a little logical game. 
+Kpictorial is a little logical game.
 
 %description -l pl
 Kpictorial jest niedu¿± gr± logiczn±.
