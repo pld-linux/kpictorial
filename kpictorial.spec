@@ -6,7 +6,9 @@ Release:	5
 License:	GPL
 Group:		X11/Applications
 Source0:	http://telia.dl.sourceforge.net/sourceforge/kpictorial/%{name}-%{version}.tar.gz
+# Source0-md5:	f4c7d7de8bac9ff6432ecbc91ba3478f
 Source1:	http://telia.dl.sourceforge.net/sourceforge/kpictorial/kpictorial-imglib-29052002.tar.gz
+# Source1-md5:	6f8245672e74388cff5cd4ca5e2a6905
 URL:		http://members.chello.at/roland.lezuo/kpictorial.html
 BuildRequires:	autoconf
 BuildRequires:	automake
