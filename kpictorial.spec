@@ -27,7 +27,7 @@ Kpictorial jest niedu¿± gr± logiczn±.
 Summary:	Kpictorial - set of images
 Summary(pl):	Kpictorial - zbiór obrazków
 Group:		X11/Applications
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description imglib
 This is a set of images in xbm and xpm format which can be used
