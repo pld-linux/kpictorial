@@ -15,8 +15,6 @@ BuildRequires:	automake
 BuildRequires:	kdelibs-devel >= 3.0.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define         _htmldir        /usr/share/doc/kde/HTML
-
 %description
 Kpictorial is a little logical game.
 
@@ -41,9 +39,7 @@ kpictorial.
 %setup -q
 
 %build
-kde_htmldir="%{_htmldir}"; export kde_htmldir
-kde_icondir="%{_pixmapsdir}"; export kde_icondir
-
+kde_htmldir="%{_kdedocdir}"; export kde_htmldir
 CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
 
 %configure \
@@ -54,12 +50,12 @@ CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_applnkdir}/Games/Board,%{_datadir}/apps/kpictorial}
+install -d $RPM_BUILD_ROOT{%{_desktopdir}/kde,%{_datadir}/apps/kpictorial}
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-mv $RPM_BUILD_ROOT%{_applnkdir}/{Games,Games/Board}/kpictorial.desktop
+mv -f $RPM_BUILD_ROOT{%{_datadir}/applnk/Games,%{_desktopdir}/kde}/kpictorial.desktop
 
 tar zxvf %{SOURCE1} -C $RPM_BUILD_ROOT%{_datadir}/apps/kpictorial
 mv $RPM_BUILD_ROOT%{_datadir}/apps/kpictorial/{kpictorial-imglib,imglib}
@@ -72,11 +68,11 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{name}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/*
-%{_applnkdir}/Games/Board/*
+%{_desktopdir}/kde/*.desktop
 %dir %{_datadir}/apps/kpictorial
 %{_datadir}/apps/kpictorial/icons
 %{_datadir}/apps/kpictorial/kpictorialui.rc
-%{_pixmapsdir}/*/*/*/*
+%{_iconsdir}/hicolor/*/*/*.png
 
 %files imglib
 %defattr(644,root,root,755)
