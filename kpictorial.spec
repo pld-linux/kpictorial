@@ -1,5 +1,5 @@
 Summary:	KDE3 logical game
-Summary(pl):	Gra logiczna dla KDE3
+Summary(pl.UTF-8):   Gra logiczna dla KDE3
 Name:		kpictorial
 Version:	0.9.1
 Release:	5
@@ -18,12 +18,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Kpictorial is a little logical game.
 
-%description -l pl
-Kpictorial jest niedu¿± gr± logiczn±.
+%description -l pl.UTF-8
+Kpictorial jest nieduÅ¼Ä… grÄ… logicznÄ….
 
 %package imglib
 Summary:	Kpictorial - set of images
-Summary(pl):	Kpictorial - zbiór obrazków
+Summary(pl.UTF-8):   Kpictorial - zbiÃ³r obrazkÃ³w
 Group:		X11/Applications
 Requires:	%{name} = %{version}-%{release}
 
@@ -31,8 +31,8 @@ Requires:	%{name} = %{version}-%{release}
 This is a set of images in xbm and xpm format which can be used
 together with kpictorial.
 
-%description imglib -l pl
-Zbiór obrazków w formacie xbm i xpm, które mog± byæ u¿yte z
+%description imglib -l pl.UTF-8
+ZbiÃ³r obrazkÃ³w w formacie xbm i xpm, ktÃ³re mogÄ… byÄ‡ uÅ¼yte z
 kpictorial.
 
 %prep
