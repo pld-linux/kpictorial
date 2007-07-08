@@ -43,6 +43,7 @@ kde_htmldir="%{_kdedocdir}"; export kde_htmldir
 CXXFLAGS="%{rpmcflags} -fno-rtti -fno-exceptions"
 
 %configure \
+	KDEDIR=%{_libdir} \
 	--enable-final \
 	--disable-rpath
 
